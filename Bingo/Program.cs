@@ -20,6 +20,10 @@
 			{
 				jatekosok.Add(new BingoJatekos("Andi.txt"));
 			}
+
+			Console.WriteLine("4. feladat");
+			Console.WriteLine($"A játékosok száma: {jatekosok.Count}");
+			Console.WriteLine();
 		}
     }
 }
