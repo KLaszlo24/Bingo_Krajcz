@@ -53,5 +53,50 @@ namespace Bingo
 				}
 			}
 		}
+
+		public bool BingoEll()
+		{
+	
+			for (int i = 0; i < 5; i++)
+			{
+				bool teljes = true;
+				for (int j = 0; j < 5; j++)
+				{
+					if (!jelolve[i, j])
+						teljes = false;
+				}
+				if (teljes) return true;
+			}
+
+	
+			for (int j = 0; j < 5; j++)
+			{
+				bool teljes = true;
+				for (int i = 0; i < 5; i++)
+				{
+					if (!jelolve[i, j])
+						teljes = false;
+				}
+				if (teljes) return true;
+			}
+
+			bool atlo1 = true;
+			for (int i = 0; i < 5; i++)
+			{
+				if (!jelolve[i, i])
+					atlo1 = false;
+			}
+			if (atlo1) return true;
+
+
+			bool atlo2 = true;
+			for (int i = 0; i < 5; i++)
+			{
+				if (!jelolve[i, 4 - i])
+					atlo2 = false;
+			}
+
+			return atlo2;
+		}
 	}
 }
