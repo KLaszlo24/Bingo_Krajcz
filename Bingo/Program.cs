@@ -74,5 +74,6 @@
 
 			Console.ReadKey();
 		}
+		//Kész idáig
 	}
 }
