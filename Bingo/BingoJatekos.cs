@@ -39,5 +39,19 @@ namespace Bingo
 				}
 			}
 		}
+
+		public void SorsoltSzamotJelol(int szam)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				for (int j = 0; j < 5; j++)
+				{
+					if (kartya[i, j] == szam)
+					{
+						jelolve[i, j] = true;
+					}
+				}
+			}
+		}
 	}
 }
