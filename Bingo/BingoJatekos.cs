@@ -8,7 +8,7 @@ namespace Bingo
 {
 	internal class BingoJatekos
 	{
-		public string Nev {  get; private set; }
+		public string Nev { get; private set; }
 		private int?[,] kartya;
 		private bool[,] jelolve;
 
@@ -56,7 +56,7 @@ namespace Bingo
 
 		public bool BingoEll()
 		{
-	
+
 			for (int i = 0; i < 5; i++)
 			{
 				bool teljes = true;
@@ -96,6 +96,28 @@ namespace Bingo
 			}
 
 			return atlo2;
+		}
+
+		public void KartyaKiir()
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				for (int j = 0; j < 5; j++)
+				{
+					if (jelolve[i, j])
+					{
+						if (kartya[i, j] == null)
+							Console.Write(" X ");
+						else
+							Console.Write($"{kartya[i, j],2} ");
+					}
+					else
+					{
+						Console.Write(" 0 ");
+					}
+				}
+				Console.WriteLine();
+			}
 		}
 	}
 }

@@ -1,9 +1,9 @@
 ﻿namespace Bingo
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
 			List<BingoJatekos> jatekosok = new List<BingoJatekos>();
 
 			if (File.Exists("nevek.text"))
@@ -58,7 +58,21 @@
 				}
 			}
 			Console.WriteLine();
-		}
 
+			Console.WriteLine("8. feladat");
+			Console.WriteLine("Nyertes(ek):");
+
+			foreach (var j in jatekosok)
+			{
+				if (j.BingoEll())
+				{
+					Console.WriteLine();
+					Console.WriteLine($"Név: {j.Nev}");
+					j.KartyaKiir();
+				}
+			}
+
+			Console.ReadKey();
+		}
 	}
 }
